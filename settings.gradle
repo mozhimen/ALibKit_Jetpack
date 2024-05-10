@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "AAbilityKit_Jetpack"
 include ':app'
 include ':leanback'
+include ':multidex'
+include ':preference'
+include ':room_rxjava2'
