@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.mozhimen.abilityk.jetpack.room.rxjava2'
+    namespace 'com.mozhimen.abilityk.jetpack.collection'
     compileSdk 34
 
     defaultConfig {
@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    api "androidx.room:room-rxjava2:2.5.2"
+    api "androidx.collection:collection-ktx:1.4.0"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
