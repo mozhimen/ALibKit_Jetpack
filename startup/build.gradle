@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.mozhimen.abilityk.jetpack.preference'
+    namespace 'com.mozhimen.abilityk.jetpack.startup'
     compileSdk 34
 
     defaultConfig {
@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-    api "androidx.preference:preference-ktx:1.1.1"
+    api "androidx.startup:startup-runtime:1.1.1"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
