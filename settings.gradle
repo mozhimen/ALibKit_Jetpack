@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AAbilityKit_Jetpack"
+rootProject.name = "ALibKit_Jetpack"
 include ':app'
 include ':leanback'
 include ':multidex'

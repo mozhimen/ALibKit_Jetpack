@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.mozhimen.abilityk.jetpack.preference'
+    namespace 'com.mozhimen.libk.jetpack.preference'
     compileSdk 34
 
     defaultConfig {
