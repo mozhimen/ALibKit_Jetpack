@@ -31,9 +31,10 @@ android {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:1.9.22"
     //datastore
-    api "androidx.datastore:datastore-preferences:1.0.0"
-    api "androidx.datastore:datastore:1.0.0"
+    api "androidx.datastore:datastore-preferences:1.1.1"
+    api "androidx.datastore:datastore:1.1.1"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

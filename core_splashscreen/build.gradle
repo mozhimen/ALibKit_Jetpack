@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.mozhimen.libk.jetpack.preference'
+    namespace 'com.mozhimen.libk.jetpack.core.splashscreen'
     compileSdk 34
 
     defaultConfig {
@@ -31,8 +31,7 @@ android {
 }
 
 dependencies {
-    api 'androidx.preference:preference:1.2.1'
-    api 'androidx.preference:preference-ktx:1.2.1'
+    api 'androidx.core:core-splashscreen:1.1.0-alpha01'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
