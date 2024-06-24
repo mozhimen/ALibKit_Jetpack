@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-    api 'androidx.core:core-splashscreen:1.1.0-alpha01'
+    api 'androidx.core:core-splashscreen:1.0.0-alpha02'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
