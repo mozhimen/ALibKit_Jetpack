@@ -49,3 +49,7 @@ include ':hilt_navigation_fragment'
 include ':hilt_navigation_compose'
 include ':hilt'
 include ':constraintlayout'
+//SwiftKit
+include ':SwiftKit'
+project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
+include ':SwiftKit:basick'
