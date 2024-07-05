@@ -50,3 +50,7 @@ include ':hilt_navigation_compose'
 include ':hilt'
 include ':constraintlayout'
 include ':camera'
+//SwiftKit
+include ':SwiftKit'
+project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
+include ':SwiftKit:basick'
