@@ -56,3 +56,4 @@ project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
 include ':swiperefreshlayout'
 include ':hilt_lifecycle_viewmodel'
+include ':room_paging'
