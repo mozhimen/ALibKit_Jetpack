@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.viewbinding.BaseActivityVB
-import com.mozhimen.basick.utilk.android.view.applyGone
-import com.mozhimen.basick.utilk.android.view.applyVisible
+import com.mozhimen.kotlin.elemk.androidx.appcompat.bases.viewbinding.BaseActivityVB
+import com.mozhimen.kotlin.utilk.android.view.applyGone
+import com.mozhimen.kotlin.utilk.android.view.applyVisible
 import com.mozhimen.libk.jetpack.test.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivityVB<ActivityMainBinding>() {
