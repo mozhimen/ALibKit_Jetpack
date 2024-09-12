@@ -50,10 +50,25 @@ include ':hilt_navigation_compose'
 include ':hilt'
 include ':constraintlayout'
 include ':camera'
+include ':room_paging'
+include ':hilt_lifecycle_viewmodel'
+include ':swiperefreshlayout'
+
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
-include ':swiperefreshlayout'
-include ':hilt_lifecycle_viewmodel'
-include ':room_paging'
+//KUtilKit
+include ':KUtilKit'
+project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
+include ':KUtilKit:utilk_android'
+include ':KUtilKit:utilk_kotlin'
+include ':navigation_compose'
+include ':navigation_common'
+include ':navigation_ui'
+include ':navigation_fragment'
+include ':lifecycle_runtime_compose'
+include ':lifecycle_process'
+include ':lifecycle_runtime'
+include ':compose_animation'
+include ':paging_compose'
