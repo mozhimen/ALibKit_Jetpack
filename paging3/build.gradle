@@ -32,8 +32,8 @@ android {
 
 dependencies {
     //data source
-    api 'androidx.paging:paging-runtime:3.3.0'
-    api 'androidx.paging:paging-common:3.3.0'
+    api 'androidx.paging:paging-runtime:3.3.2'
+    api 'androidx.paging:paging-common:3.3.2'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
