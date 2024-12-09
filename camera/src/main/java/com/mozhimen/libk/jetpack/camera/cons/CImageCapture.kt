@@ -24,7 +24,7 @@ object CImageCapture {
      * 在此模式下，相机会使用更高的分辨率、更高的动态范围和更精细的色彩处理。
      */
 
-    const val CAPTURE_MODE_MAXIMIZE_QUALITY = ImageCapture.CAPTURE_MODE_MAXIMIZE_QUALITY
+    const val CAPTURE_MODE_MAXIMIZE_QUALITY = ImageCapture.CAPTURE_MODE_MAXIMIZE_QUALITY//5.52MB
 
     /**
      * CAPTURE_MODE_MINIMIZE_LATENCY（最小化延迟模式）：
@@ -33,7 +33,7 @@ object CImageCapture {
      * 适用于实时视频传输、游戏或需要即时反应的场景。
      * 这种模式可能会牺牲一些图像质量，尤其是在低光条件下或高分辨率情况下。
      */
-    const val CAPTURE_MODE_MINIMIZE_LATENCY = ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY
+    const val CAPTURE_MODE_MINIMIZE_LATENCY = ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY//4.10MB
 
     /**
      * CAPTURE_MODE_ZERO_SHUTTER_LAG（零快门延迟模式）：
@@ -43,5 +43,5 @@ object CImageCapture {
      * 在这种模式下，相机几乎立即捕捉到画面，避免错过关键瞬间。
      */
     @SuppressLint("UnsafeOptInUsageError")
-    const val CAPTURE_MODE_ZERO_SHUTTER_LAG = ImageCapture.CAPTURE_MODE_ZERO_SHUTTER_LAG
+    const val CAPTURE_MODE_ZERO_SHUTTER_LAG = ImageCapture.CAPTURE_MODE_ZERO_SHUTTER_LAG//4.80MB
 }
