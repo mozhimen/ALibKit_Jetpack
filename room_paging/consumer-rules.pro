@@ -1,0 +1,2 @@
+-dontwarn androidx.room.paging.**
+-dontwarn android.arch.persistence.room.paging.**

@@ -35,7 +35,7 @@ include ':biometric_ktx'
 include ':biometric'
 include ':room'
 include ':datastore'
-include ':concurrent'
+include ':concurrent_futures'
 include ':exifinterface'
 include ':paging2'
 include ':paging3'
@@ -53,16 +53,6 @@ include ':camera'
 include ':room_paging'
 include ':hilt_lifecycle_viewmodel'
 include ':swiperefreshlayout'
-
-//SwiftKit
-include ':SwiftKit'
-project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
-include ':SwiftKit:basick'
-//KUtilKit
-include ':KUtilKit'
-project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
-include ':KUtilKit:utilk_android'
-include ':KUtilKit:utilk_kotlin'
 include ':navigation_compose'
 include ':navigation_common'
 include ':navigation_ui'
@@ -86,3 +76,26 @@ include ':core'
 include ':appcompat'
 include ':databinding'
 include ':emoji2'
+include ':webkit'
+include ':lifecycle_extensions'
+include ':annotation'
+//ASwiftKit
+include ':ASwiftKit'
+project(':ASwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ASwiftKit")
+include ':ASwiftKit:basick'
+//KUtilKit
+include ':KUtilKit'
+project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
+include ':KUtilKit:utilk_android'
+include ':KUtilKit:utilk_kotlin'
+//ALibKit_Jetbrains
+include ':ALibKit_Jetbrains'
+project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
+include ':ALibKit_Jetbrains:kotlin_stdlib'
+include ':ALibKit_Jetbrains:kotlinx_coroutines'
+//ALibKit_Google
+include ':ALibKit_Google'
+project(':ALibKit_Google').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Google")
+include ':ALibKit_Google:material'
+
+
