@@ -99,3 +99,4 @@ project(':ALibKit_Google').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit
 include ':ALibKit_Google:material'
 
 
+include ':print'
