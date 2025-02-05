@@ -100,3 +100,4 @@ include ':ALibKit_Google:material'
 
 
 include ':print'
+include ':camera_core'
