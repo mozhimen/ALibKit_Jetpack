@@ -101,3 +101,7 @@ include ':ALibKit_Google:material'
 
 include ':print'
 include ':camera_core'
+include ':window'
+include ':window_java'
+include ':window_rxjava2'
+include ':window_rxjava3'
