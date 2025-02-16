@@ -10,6 +10,7 @@ import androidx.datastore.core.okio.OkioStorage
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.PreferencesSerializer
 import androidx.datastore.preferences.preferencesDataStoreFile
+import com.mozhimen.kotlin.elemk.commons.IA_BListener
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -26,20 +27,20 @@ import kotlin.reflect.KProperty
  * @Date 2024/6/14
  * @Version 1.0
  */
-public fun multiProcessPreferencesDataStore(
+fun multiProcessPreferencesDataStore(
     name: String,
     corruptionHandler: ReplaceFileCorruptionHandler<Preferences>? = null,
-    produceMigrations: (Context) -> List<DataMigration<Preferences>> = { listOf() },
-    scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+    produceMigrations: IA_BListener<Context, List<DataMigration<Preferences>>> = { listOf() },
+    coroutineScope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
 ): ReadOnlyProperty<Context, DataStore<Preferences>> {
-    return MultiProcessPreferenceDataStoreSingletonDelegate(name, corruptionHandler, produceMigrations, scope)
+    return MultiProcessPreferenceDataStoreSingletonDelegate(name, corruptionHandler, produceMigrations, coroutineScope)
 }
 
 internal class MultiProcessPreferenceDataStoreSingletonDelegate internal constructor(
     private val name: String,
     private val corruptionHandler: ReplaceFileCorruptionHandler<Preferences>?,
     private val produceMigrations: (Context) -> List<DataMigration<Preferences>>,
-    private val scope: CoroutineScope
+    private val coroutineScope: CoroutineScope,
 ) : ReadOnlyProperty<Context, DataStore<Preferences>> {
 
     private val lock = Any()
@@ -50,7 +51,6 @@ internal class MultiProcessPreferenceDataStoreSingletonDelegate internal constru
 
     /**
      * Gets the instance of the DataStore.
-     *
      * @param thisRef must be an instance of [Context]
      * @param property not used
      */
@@ -62,7 +62,7 @@ internal class MultiProcessPreferenceDataStoreSingletonDelegate internal constru
                 INSTANCE = create(
                     corruptionHandler = corruptionHandler,
                     migrations = produceMigrations(applicationContext),
-                    scope = scope
+                    scope = coroutineScope
                 ) {
                     applicationContext.preferencesDataStoreFile(name)
                 }
@@ -75,7 +75,7 @@ internal class MultiProcessPreferenceDataStoreSingletonDelegate internal constru
         corruptionHandler: ReplaceFileCorruptionHandler<Preferences>? = null,
         migrations: List<DataMigration<Preferences>> = listOf(),
         scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
-        produceFile: () -> File
+        produceFile: () -> File,
     ): DataStore<Preferences> {
         val delegate = MultiProcessDataStoreFactory.create(
             storage = OkioStorage(FileSystem.SYSTEM, PreferencesSerializer) {
