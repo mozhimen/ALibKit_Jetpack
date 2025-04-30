@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.mozhimen.libk.jetpack.hilt'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         minSdk 19
