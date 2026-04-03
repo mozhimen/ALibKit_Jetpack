@@ -10,7 +10,6 @@ import androidx.datastore.core.okio.OkioStorage
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.PreferencesSerializer
 import androidx.datastore.preferences.preferencesDataStoreFile
-import com.mozhimen.kotlin.elemk.commons.IA_BListener
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -30,7 +29,7 @@ import kotlin.reflect.KProperty
 fun multiProcessPreferencesDataStore(
     name: String,
     corruptionHandler: ReplaceFileCorruptionHandler<Preferences>? = null,
-    produceMigrations: IA_BListener<Context, List<DataMigration<Preferences>>> = { listOf() },
+    produceMigrations: (a:Context) -> List<DataMigration<Preferences>> = { listOf() },
     coroutineScope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
 ): ReadOnlyProperty<Context, DataStore<Preferences>> {
     return MultiProcessPreferenceDataStoreSingletonDelegate(name, corruptionHandler, produceMigrations, coroutineScope)

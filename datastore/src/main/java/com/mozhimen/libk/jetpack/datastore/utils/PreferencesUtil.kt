@@ -3,10 +3,7 @@ package com.mozhimen.libk.jetpack.datastore.utils
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.MutablePreferences
 import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
-import com.mozhimen.kotlin.elemk.commons.ISuspendABC_Listener
-import com.mozhimen.kotlin.elemk.commons.ISuspendA_Listener
 
 /**
  * @ClassName UtilKPreferences
@@ -15,7 +12,7 @@ import com.mozhimen.kotlin.elemk.commons.ISuspendA_Listener
  * @Date 2024/12/7 0:22
  * @Version 1.0
  */
-suspend fun <T> DataStore<Preferences>.applyUpdateData(key: String, value: T, transform: ISuspendABC_Listener<String, T, MutablePreferences>): Preferences =
+suspend fun <T> DataStore<Preferences>.applyUpdateData(key: String, value: T, transform: suspend (a: String, b: T, c: MutablePreferences) -> Unit/*ISuspendABC_Listener<String, T, MutablePreferences>*/): Preferences =
     PreferencesUtil.applyUpdateData(this, key, value, transform)
 
 suspend fun DataStore<Preferences>.applyUpdateData(): Preferences =
@@ -32,7 +29,7 @@ suspend fun DataStore<Preferences>.applyUpdateDataEmpty(): Preferences =
  */
 object PreferencesUtil {
     @JvmStatic
-    suspend fun <T> applyUpdateData(dataStore: DataStore<Preferences>, key: String, value: T, transform: ISuspendABC_Listener<String, T, MutablePreferences>): Preferences =
+    suspend fun <T> applyUpdateData(dataStore: DataStore<Preferences>, key: String, value: T, transform: suspend (a: String, b: T, c: MutablePreferences) -> Unit): Preferences =
         dataStore.updateData { preferences ->
             preferences.toMutablePreferences().apply { transform.invoke(key, value, this) }
         }
