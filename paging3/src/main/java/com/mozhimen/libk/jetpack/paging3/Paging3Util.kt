@@ -1,4 +1,4 @@
-package com.mozhimen.pagingk.paging3.basic.utils
+package com.mozhimen.libk.jetpack.paging3
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig

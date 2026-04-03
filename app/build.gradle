@@ -37,4 +37,5 @@ android {
 
 dependencies {
     implementation project(':ASwiftKit:basick')
+    implementation project(':ASwiftKit:uik:databinding')
 }

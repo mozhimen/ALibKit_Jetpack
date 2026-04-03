@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
-import com.mozhimen.kotlin.elemk.androidx.appcompat.bases.viewbinding.BaseActivityVB
 import com.mozhimen.kotlin.utilk.android.view.applyGone
 import com.mozhimen.kotlin.utilk.android.view.applyVisible
 import com.mozhimen.libk.jetpack.test.databinding.ActivityMainBinding
+import com.mozhimen.uik.databinding.bases.viewbinding.activity.BaseActivityVB
 
 class MainActivity : BaseActivityVB<ActivityMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
