@@ -1,6 +1,8 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        google()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
@@ -13,8 +15,6 @@ dependencyResolutionManagement {
         maven { url 'https://developer.huawei.com/repo/' }
         maven { url "https://jitpack.io" }
         maven { url 'https://www.jitpack.io' }
-        mavenCentral()
-        google()
     }
 }
 
